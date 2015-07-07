@@ -62,13 +62,13 @@
     @include transform(scale(0.5) translate3d(0px, 20px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
   100% {
-    @include transform(scale(0.5) translate3d(-80px, 100px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
+    @include transform(scale(0.5) translate3d(-80px, 80px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
 }
 
 @include keyframes(explode-backend) {
   100% {
-    @include transform(scale(0.5) translate3d(0px, 40px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
+    @include transform(scale(0.5) translate3d(0px, 20px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
 }
 
@@ -77,6 +77,6 @@
     @include transform(scale(0.5) translate3d(0px, 20px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
   100% {
-    @include transform(scale(0.5) translate3d(80px, 0px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
+    @include transform(scale(0.5) translate3d(80px, -20px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
 }
