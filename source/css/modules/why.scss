@@ -1,0 +1,44 @@
+.b-why {
+  background-color: white;
+}
+.b-why__inner {
+  @extend .container;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    // font-size: 1.8em;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 50px;
+  }
+}
+.b-why__features {
+  @extend .pure-g;
+}
+.b_why__feature {
+  @extend .pure-u-md-8-24;
+  @extend .pure-u-sm-24-24;
+  @extend .pure-u-24-24;
+  &:nth-child(2) .b_why__feature-inner {
+    margin: auto;
+  }
+  &:nth-child(3) .b_why__feature-inner {
+    margin-left: auto;
+  }
+  img {
+    @extend .pure-img;
+    margin: auto;
+  }
+}
+.b_why__feature-inner {
+  width: 200px;
+  h3 {
+    font-weight: lighter;
+  }
+  p {
+    font-size: 0.8em;
+    font-weight: lighter;
+    line-height: 2em;
+  }
+}

@@ -1,0 +1,50 @@
+.b-stats {
+  @include background-image(linear-gradient(to bottom right, $skyblue_color, $blue_color));
+  @extend .pure-g;
+}
+.b-stats__inner {
+  @extend .pure-u-5-5;
+  @extend .container;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: white;
+  h2, p {
+    font-weight: lighter;
+    line-height: 2em;
+  }
+  .ivs-separator {
+    margin: auto;
+    background-color: white;
+  }
+}
+.b-stats__infos {
+  width: 500px;
+  margin: 50px auto;
+}
+.b-stats__info {
+  width: 50%;
+  float: left;
+  font-weight: lighter;
+  &:nth-child(1) {
+    border-right: 1px solid $skyblue_color;
+  }
+}
+.b-stats__info-value {
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1em;
+  position: relative;
+  sup {
+    position: absolute;
+    top: 0.5em;
+    font-size: 0.3em;
+    font-weight: normal;
+  }
+}
+.b-stats__info-desc {
+  color: $skyblue_color;
+}
+.b-stats_reference {
+
+}
