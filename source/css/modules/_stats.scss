@@ -1,12 +1,13 @@
 .b-stats {
   @include background-image(linear-gradient(to bottom right, $skyblue_color, $blue_color));
   @extend .pure-g;
+  position: relative;
 }
 .b-stats__inner {
   @extend .pure-u-5-5;
   @extend .container;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
   text-align: center;
   color: white;
   h2, p {
@@ -46,5 +47,9 @@
   color: $skyblue_color;
 }
 .b-stats_reference {
-
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: $skyblue_color;
+  letter-spacing: 0em;
 }
