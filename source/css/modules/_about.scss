@@ -7,7 +7,10 @@
   padding-bottom: 50px;
 }
 .b-about__text {
-  @extend .pure-u-6-24;
+  @extend .pure-u-lg-6-24;
+  @extend .pure-u-md-8-24;
+  @extend .pure-u-sm-24-24;
+  @extend .pure-u-24-24;
   h1, p {
     font-weight: lighter;
   }
@@ -16,54 +19,64 @@
   }
 }
 .b-about__picture {
-  @extend .pure-u-18-24;
-}
-.b-about__layers-wrapper {
-  text-align: center;
-  margin: auto;
-  width: 100%;
-  max-width: 350px;
+  @extend .pure-u-lg-18-24;
+  @extend .pure-u-md-16-24;
+  @extend .pure-u-sm-24-24;
+  @extend .pure-u-24-24;
 }
 .b-about__layers {
   position: relative;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 295px;
+  &:after {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 85%;
+  }
   .b-about__player, .b-about__backend, .b-about__core {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     @extend .pure-img;
   }
 }
 
-.b-about__picture--animating .b-about__layers {
-  @include transform(scale(1));
-  @include animation(rotate-layers 1200ms 1000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
-}
 .b-about__picture--animating .b-about__player {
   z-index: 30;
-  @include animation(explode-player 1200ms 2000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
+  @include animation(explode-player 2400ms 1000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
 }
 .b-about__picture--animating .b-about__backend {
   z-index: 20;
+  @include animation(explode-backend 1200ms 1000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
 }
 .b-about__picture--animating .b-about__core {
   z-index: 10;
-  @include animation(explode-core 1200ms 2000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
-}
-
-@include keyframes(rotate-layers) {
-  to {
-    @include transform(scale(0.6) translate3d(50px, 120px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
-  }
+  @include animation(explode-core 2400ms 1000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
 }
 
 @include keyframes(explode-player) {
-  to {
-    @include transform(translate3d(-100px, 100px, 100px));
+  50% {
+    @include transform(scale(0.5) translate3d(0px, 20px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
+  }
+  100% {
+    @include transform(scale(0.5) translate3d(-80px, 100px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
+  }
+}
+
+@include keyframes(explode-backend) {
+  100% {
+    @include transform(scale(0.5) translate3d(0px, 40px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
 }
 
 @include keyframes(explode-core) {
-  to {
-    @include transform(translate3d(100px, -100px, 100px));
+  50% {
+    @include transform(scale(0.5) translate3d(0px, 20px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
+  }
+  100% {
+    @include transform(scale(0.5) translate3d(80px, 0px, 0) rotate(30deg) skewX(30deg) skewY(0deg));
   }
 }
