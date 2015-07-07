@@ -37,11 +37,11 @@ compass_config do |config|
 end
 
 # Change Compass configuration
-config :development do
+# config :development do
   compass_config do |config|
     config.sass_options = { debug_info: false }
   end
-end
+# end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -132,7 +132,7 @@ configure :build do
 
   # Use relative URLs
   activate :relative_assets
-
+  set :relative_links, true
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
