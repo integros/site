@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="150px" height="123px" viewBox="0 0 150 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>devices</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="watch" sketch:type="MSLayerGroup" transform="translate(21.000000, 1.000000)">
+            <g id="Welcome" sketch:type="MSShapeGroup">
+                <g id="Icons2">
+                    <g id="Time">
+                        <path d="M92.621639,19.6460803 L104.203193,30.2116422 L95.4282143,39.4174118 L83.8466601,28.8518499 L92.621639,19.6460803 L92.621639,19.6460803 Z" id="Rectangle-3" stroke="#3480FF" fill="#F0F6FB"></path>
+                        <rect id="Rectangle-1" stroke="#3480FF" fill="#F0F6FB" x="45.3214286" y="8.71428571" width="15.4285714" height="8.71428571"></rect>
+                        <ellipse id="Oval-1" stroke="#3480FF" fill="#F0F6FB" cx="53.0357143" cy="67.7777778" rx="53.0357143" ry="53.2539683"></ellipse>
+                        <rect id="Rectangle-2" stroke="#3480FF" fill="#F0F6FB" x="39.5357143" y="0" width="27" height="9.68253968"></rect>
+                        <ellipse id="Oval-2" stroke="#4188FF" fill="#FFFFFF" cx="53.0357143" cy="67.7777778" rx="44.3571429" ry="44.5396825"></ellipse>
+                        <path d="M52.5535714,23.7222222 L52.5535714,27.5952381" id="Line" stroke="#3480FF"></path>
+                        <path d="M52.5535714,107.960317 L52.5535714,111.833333" id="Line-Copy" stroke="#3480FF"></path>
+                        <path d="M9.16071429,68.2619048 L13.0178571,68.2619048" id="Line" stroke="#3480FF"></path>
+                        <path d="M23.925432,101.016413 L26.0519799,98.2777778" id="Line-Copy-5" stroke="#3480FF"></path>
+                        <path d="M93.0535714,68.2619048 L96.9107143,68.2619048" id="Line-Copy-2" stroke="#3480FF"></path>
+                        <path d="M81.6906031,39.8184757 L83.8171511,37.0798399" id="Line-Copy-6" stroke="#3480FF"></path>
+                        <path d="M22.261294,36.8767138 L24.988706,39.6153497" id="Line-Copy-4" stroke="#3480FF"></path>
+                        <path d="M80.8917627,95.9402059 L83.6191745,98.6788421" id="Line-Copy-3" stroke="#3480FF"></path>
+                        <path d="M52.5535714,34.3730159 L52.5535714,78.9232215" id="Line" stroke="#3480FF"></path>
+                        <path d="M44.8392857,76.0079365 L67.0178571,53.7380952" id="Line" stroke="#3480FF"></path>
+                        <ellipse id="Oval-3" stroke="#347FFF" fill="#FFFFFF" cx="52.5535714" cy="68.2619048" rx="3.375" ry="3.38888889"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
