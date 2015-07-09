@@ -16,13 +16,13 @@ html
 
     header.b-header
       .b-header__inner
-        .b-menu
-          a.b-menu__logo-link href="#"
+        .b-header__menu
+          a.b-header__logo-link href="#"
             img src="#{image_path 'logo.svg'}" width="100"
-          ul.b-menu__list
-            li.pure-menu-item: a href="#" class="b-menu__link" Pricing
-            li.pure-menu-item: a href="#" class="b-menu__link" Developers
-            li.pure-menu-item: a href="#" class="b-menu__link" Contacts
+          ul.b-header__menu-list
+            li.pure-menu-item: a href="#" class="b-header__menu-link" Pricing
+            li.pure-menu-item: a href="#" class="b-header__menu-link" Developers
+            li.pure-menu-item: a href="#" class="b-header__menu-link" Contacts
             li.pure-menu-item: a href="#" class="pure-button pure-button-primary" Get access
 
     main
@@ -98,5 +98,31 @@ html
               .b-stats__info-desc req/sec<sup>*</sup>
 
         .b-stats_reference <sup>*</sup>Real-time analytics from the VideoLayer
+
+      .b-getaccess
+        .b-getaccess__inner
+          a.b-getaccess__link Get access
+
+    footer.b-footer
+      .b-footer__inner
+        .b-footer__menu
+          ul.b-footer__menu-list
+            li.pure-menu-item: a href="#" class="b-footer__menu-link" About
+            li.pure-menu-item: a href="#" class="b-footer__menu-link" Pricing
+            li.pure-menu-item: a href="#" class="b-footer__menu-link" Docs
+            li.pure-menu-item: a href="#" class="b-footer__menu-link" Contacts
+
+          ul.b-footer__menu-list.pull-right
+            li.pure-menu-item: a href="#" class="b-footer__menu-link" Sign in
+            li.pure-menu-item: a href="#" class="pure-button pure-button-primary" Contact us
+
+        .b-footer__copyright
+          .b-footer__social-menu
+            span.b-footer__copytext &copy; 2015 Integros Video Layer
+            ul.b-footer__social-menu-list.pull-right
+              li.pure-menu-item: a href="#" class="b-footer__social-link" Twitter
+              li.pure-menu-item: a href="#" class="b-footer__social-link" Github
+              li.pure-menu-item: a href="#" class="b-footer__social-link" Dribbble
+
 
     = javascript_include_tag  "application"

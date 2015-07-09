@@ -1,0 +1,42 @@
+@mixin box-shadow-points($num, $grid: 40) {
+  $content: '0px 0px 0 1px rgba(255, 255, 255, 0)';
+  @for $i from 0 to $num {
+    @for $j from 0 to $num {
+      $content: $content + ', #{$i*$grid + 1}px #{$j*$grid + 1}px 0 .5px rgba(255, 255, 255, 0.5)';
+    }
+  }
+  box-shadow: #{$content};
+}
+
+
+.b-getaccess {
+  @include background-image(linear-gradient(to bottom right, $skyblue_color, $blue_color));
+  @extend .pure-g;
+  position: relative;
+}
+.b-getaccess__inner {
+  // background: image-url('point.png') repeat 0 0;
+  @extend .pure-u-5-5;
+  padding: 200px 0;
+  text-align: center;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    content: "";
+    display: block;
+    color: #fff;
+    width: 1px;
+    height: 1px;
+    @include box-shadow-points(100, 30);
+    // box-shadow: 20px 20px 0 1px rgba(255, 255, 255, 1);
+  }
+}
+
+.b-getaccess__link {
+  padding: 20px;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}

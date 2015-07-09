@@ -5,23 +5,23 @@
   @extend .pure-u-5-5;
   @extend .container;
 }
-.b-menu {
+.b-header__menu {
   @extend .pure-menu;
   @extend .pure-menu-horizontal;
   padding: 10px 0;
   border-bottom: 1px solid #efefef;
 }
-.b-menu__link {
+.b-header__menu-link {
   @extend .pure-menu-link;
   color: black;
 }
 
-.b-menu__list {
+.b-header__menu-list {
   @extend .pure-menu-list;
   float: right;
 }
 
-.b-menu__logo-link {
+.b-header__logo-link {
   display: inline-block;
   padding: .4em 1em;
   line-height: 1px;

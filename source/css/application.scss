@@ -28,17 +28,6 @@ body {
   @include breakpoint('tablet', 'max') {
     width: 100%;
   }
-  // // sm
-  // @media screen and (min-width: 35.5em) {
-  //   width: 720px;
-  // }
-  // // lg
-  // @media screen and (min-width: 64em) {
-  // }
-  // // xl
-  // @media screen and (min-width: 80em) {
-
-  // }
 }
 
 .ivs-separator {
@@ -51,3 +40,5 @@ body {
 @import "modules/about";
 @import "modules/why";
 @import "modules/stats";
+@import "modules/getaccess";
+@import "modules/footer";
