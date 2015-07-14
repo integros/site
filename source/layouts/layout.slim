@@ -18,12 +18,16 @@ html
       .b-header__inner
         .b-header__menu
           a.b-header__logo-link href="#"
-            img src="#{image_path 'logo.svg'}" width="100"
+            img src="#{image_path 'logo.svg'}" width="100" data-no-retina=""
+          a.b-header__menu-toggle href="#" id="toggle"
+            span class="bar"
+            span class="bar"
+            span class="bar"
           ul.b-header__menu-list
-            li.pure-menu-item: a href="#" class="b-header__menu-link" Pricing
-            li.pure-menu-item: a href="#" class="b-header__menu-link" Developers
-            li.pure-menu-item: a href="#" class="b-header__menu-link" Contacts
-            li.pure-menu-item: a href="#" class="pure-button pure-button-primary" Get access
+            li.b-header__menu-item: a href="#" class="b-header__menu-link" Pricing
+            li.b-header__menu-item: a href="#" class="b-header__menu-link" Developers
+            li.b-header__menu-item: a href="#" class="b-header__menu-link" Contacts
+            li.b-header__menu-item: a href="#" class="pure-button pure-button-primary" Get access
 
     main
       .b-about
@@ -36,11 +40,12 @@ html
               | for developers
             .ivs-separator
             p The right way to integrate video stack into your apps. Design, SDK and infrastructure out of the box.
+            a.pure-button.pure-button-primary href="#" Get access
           .b-about__picture.b-about__picture--animating
             .b-about__layers
-              img.b-about__player src="#{image_path('player.svg')}"
-              img.b-about__backend src="#{image_path('backend.svg')}"
-              img.b-about__core src="#{image_path('core.svg')}"
+              img.b-about__player src="#{image_path('player.png')}"
+              img.b-about__backend src="#{image_path('backend.png')}"
+              img.b-about__core src="#{image_path('core.png')}"
 
       .b-why
         .b-why__inner
@@ -50,7 +55,7 @@ html
           .b-why__features
             .b_why__feature
               .b_why__feature-inner
-                img src="#{image_path 'watch.svg'}"
+                img src="#{image_path 'time.png'}"
                 h3 Start saving <br/> time
                 .ivs-separator
                 p
@@ -61,7 +66,7 @@ html
                   | features in a few lines of code.
             .b_why__feature
               .b_why__feature-inner
-                img src="#{image_path 'wallet.svg'}"
+                img src="#{image_path 'payment.png'}"
                 h3 Affordable <br/> pricing
                 .ivs-separator
                 p
@@ -72,7 +77,7 @@ html
                   | price with no hidden fees.
             .b_why__feature
               .b_why__feature-inner
-                img src="#{image_path 'devices.svg'}"
+                img src="#{image_path 'devices.png'}"
                 h3 Build for your environment
                 .ivs-separator
                 p

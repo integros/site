@@ -48,9 +48,7 @@ end
 ###
 
 # Slim settings
-Slim::Engine.set_default_options :pretty => true
-# shortcut
-Slim::Engine.set_default_options :shortcut => {
+Slim::Engine.set_default_options :pretty => true, :shortcut => {
   '#' => {:tag => 'div', :attr => 'id'},
   '.' => {:tag => 'div', :attr => 'class'},
   '&' => {:tag => 'input', :attr => 'type'}

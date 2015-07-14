@@ -1,7 +1,7 @@
-@mixin box-shadow-points($num, $grid: 40) {
+@mixin box-shadow-points($x,$y, $grid: 40) {
   $content: '0px 0px 0 1px rgba(255, 255, 255, 0)';
-  @for $i from 0 to $num {
-    @for $j from 0 to $num {
+  @for $i from 0 to $x {
+    @for $j from 0 to $y {
       $content: $content + ', #{$i*$grid + 1}px #{$j*$grid + 1}px 0 .5px rgba(255, 255, 255, 0.5)';
     }
   }
@@ -10,7 +10,7 @@
 
 
 .b-getaccess {
-  @include background-image(linear-gradient(to bottom right, $skyblue_color, $blue_color));
+  @include background-image(linear-gradient(to bottom right, $color-skyblue, $color-blue));
   @extend .pure-g;
   position: relative;
 }
@@ -29,8 +29,7 @@
     color: #fff;
     width: 1px;
     height: 1px;
-    @include box-shadow-points(100, 30);
-    // box-shadow: 20px 20px 0 1px rgba(255, 255, 255, 1);
+    @include box-shadow-points(100, 15, 30);
   }
 }
 

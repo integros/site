@@ -8,8 +8,12 @@
 .b-header__menu {
   @extend .pure-menu;
   @extend .pure-menu-horizontal;
+  position: relative;
   padding: 10px 0;
   border-bottom: 1px solid #efefef;
+  height: 3.7em;
+  overflow: hidden;
+  @include transition(height 0.5s);
 }
 .b-header__menu-link {
   @extend .pure-menu-link;
@@ -17,12 +21,57 @@
 }
 
 .b-header__menu-list {
-  @extend .pure-menu-list;
   float: right;
+  @extend .pure-menu-list;
 }
-
+.b-header__menu-item {
+  @extend .pure-menu-item;
+}
 .b-header__logo-link {
   display: inline-block;
   padding: .4em 1em;
   line-height: 1px;
+}
+
+.b-header__menu-toggle {
+  width: 34px;
+  height: 51px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  padding-top: 1.3em;
+  span {
+    background-color: #777;
+    display: block;
+    // width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+    border-radius: 100px;
+    // position: absolute;
+    // top: 18px;
+    // right: 7px;
+    @include transition(all 0.5s);
+  }
+}
+
+@include breakpoint('tablet', 'max') {
+  .b-header__menu-toggle {
+    display: block;
+  }
+  .b-header__menu {
+    &.b-header__menu--open {
+      height: 14em;
+    }
+    .b-header__menu-list {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-top: 11px;
+    }
+    .b-header__menu-item {
+      display: block;
+    }
+    @include transition(height 0.5s);
+  }
 }

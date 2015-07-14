@@ -1,5 +1,5 @@
 .b-stats {
-  @include background-image(linear-gradient(to bottom right, $skyblue_color, $blue_color));
+  @include background-image(linear-gradient(to bottom right, $color-skyblue, $color-blue));
   @extend .pure-g;
   position: relative;
 }
@@ -28,7 +28,7 @@
   float: left;
   font-weight: lighter;
   &:nth-child(1) {
-    border-right: 1px solid $skyblue_color;
+    border-right: 1px solid $color-skyblue;
   }
 }
 .b-stats__info-value {
@@ -44,12 +44,12 @@
   }
 }
 .b-stats__info-desc {
-  color: $skyblue_color;
+  color: $color-skyblue;
 }
 .b-stats_reference {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: $skyblue_color;
+  color: $color-skyblue;
   letter-spacing: 0em;
 }
