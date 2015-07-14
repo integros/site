@@ -58,7 +58,7 @@
           <div class="b-why__features">
             <div class="b_why__feature">
               <div class="b_why__feature-inner">
-                <img src="images/time.png" />
+                <img src="images/watch.png" />
                 <h3>
                   Start saving <br/> time
                 </h3>
@@ -70,7 +70,7 @@
             </div>
             <div class="b_why__feature">
               <div class="b_why__feature-inner">
-                <img src="images/payment.png" />
+                <img src="images/wallet.png" />
                 <h3>
                   Affordable <br/> pricing
                 </h3>
