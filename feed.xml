@@ -129,7 +129,7 @@
       </div>
       <div class="b-getaccess">
         <div class="b-getaccess__inner">
-          <a class="b-getaccess__link">Get access</a>
+          <a class="b-getaccess__link" href="#">Get access</a>
         </div>
       </div>
     </main>
