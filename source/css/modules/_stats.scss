@@ -2,6 +2,24 @@
   @include background-image(linear-gradient(to bottom right, $color-skyblue, $color-blue));
   @extend .pure-g;
   position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: image-url('wav01.svg') repeat-x left bottom;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: image-url('wav02.svg') repeat-x 300px bottom;
+  }
 }
 .b-stats__inner {
   @extend .pure-u-5-5;
@@ -10,6 +28,9 @@
   padding-bottom: 200px;
   text-align: center;
   color: white;
+  h2 {
+    font-size: 2.2em;
+  }
   h2, p {
     font-weight: lighter;
     line-height: 2em;
@@ -20,12 +41,13 @@
   }
 }
 .b-stats__infos {
-  width: 500px;
+  @extend .pure-g;
+  max-width: 500px;
   margin: 50px auto;
 }
 .b-stats__info {
-  width: 50%;
-  float: left;
+  @extend .pure-u-sm-1-2;
+  @extend .pure-u-5-5;
   font-weight: lighter;
   &:nth-child(1) {
     border-right: 1px solid $color-skyblue;
@@ -52,4 +74,17 @@
   left: 20px;
   color: $color-skyblue;
   letter-spacing: 0em;
+}
+
+@include breakpoint('568px', 'max') {
+  .b-stats__infos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .b-stats__info {
+    &:nth-child(1) {
+      border: 0;
+      margin-bottom: 20px;
+    }
+  }
 }

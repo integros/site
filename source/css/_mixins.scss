@@ -11,4 +11,7 @@
   @else if $point == mobileonly { // <568
     @media (#{$t}-width: 35.5em)  { @content ; }
   }
+  @else {
+    @media (#{$t}-width: #{$point})  { @content ; }
+  }
 }
