@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1600px" height="188px" viewBox="0 0 1600 188" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Waves</title>
+    <desc>Created with Integros.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Waves" fill="#FFFFFF" opacity="0.1">
+            <path d="M800,0.0147542246 C1000,0.0147542246 1000,100.139754 1200,100.014754 C1400,100.014754 1402,-0.985246371 1600,0.0147536294 L1600,188.079695 L800,188.079695 M0,0.0073766001 C200,0.0073766001 200,100.132377 400,100.007377 C600,100.007377 602,-0.992622971 800,0.00737702932 L800,188.072318 L0,188.072318" id="Path-1309-Copy"></path>
+        </g>
+    </g>
+</svg>
