@@ -13,8 +13,8 @@ body {
   max-width: 100%;
   width: 970px;
   margin: 0 auto;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 
   @include breakpoint('laptop', 'max') {
     width: 760px;
