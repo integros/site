@@ -1,13 +1,27 @@
-@mixin box-shadow-points($x,$y, $grid: 40) {
+@mixin box-shadow-points($x,$y, $offset: 30, $opacity: 0.5) {
   $content: '0px 0px 0 1px rgba(255, 255, 255, 0)';
   @for $i from 0 to $x {
     @for $j from 0 to $y {
-      $content: $content + ', #{$i*$grid + 1}px #{$j*$grid + 1}px 0 .5px rgba(255, 255, 255, 0.5)';
+      $content: $content + ', #{$i*$offset + 1}px #{$j*$offset + 1}px 0 .5px rgba(255, 255, 255, #{$opacity})';
     }
   }
   box-shadow: #{$content};
 }
 
+@mixin rectangle-points($x, $y, $offset: 30, $left: 0, $top: 0) {
+  $content: '0px 0px 0 1px rgba(255, 255, 255, 0)';
+
+  @for $i from 0 to $x {
+    $content: $content + ', #{$i*$offset + 1 + $left*$offset}px #{$top*$offset + 1}px .5px 1.5px rgba(255, 255, 255, 1)';
+    $content: $content + ', #{$i*$offset + 1 + $left*$offset}px #{$top*$offset + $y*$offset + 1}px .5px 1.5px rgba(255, 255, 255, 1)';
+  }
+  @for $i from 0 to ($y - 1) {
+    $content: $content + ', #{$left*$offset + 1}px #{$i*$offset + 1 + ($top + 1)*$offset}px .5px 1.5px rgba(255, 255, 255, 1)';
+    $content: $content + ', #{$left*$offset + 1 + ($x - 1)*$offset}px #{$i*$offset + 1 + ($top + 1)*$offset}px .5px 1.5px rgba(255, 255, 255, 1)';
+  }
+
+  box-shadow: #{$content};
+}
 
 .b-getaccess {
   @include background-image(linear-gradient(to bottom right, $color-skyblue, $color-blue));
@@ -15,10 +29,10 @@
   position: relative;
 }
 .b-getaccess__inner {
-  // background: image-url('point.png') repeat 0 0;
   @extend .pure-u-5-5;
   padding: 175px 0;
   text-align: center;
+
   &:after {
     position: absolute;
     top: 0;
@@ -29,13 +43,29 @@
     color: #fff;
     width: 1px;
     height: 1px;
-    @include box-shadow-points(100, 15, 30);
+    @include box-shadow-points(100, 14);
   }
 }
 
 .b-getaccess__link {
-  padding: 20px;
+  padding: 40px;
+  margin-left: 4px;
   color: white;
   font-size: 2em;
   text-align: center;
+  position: relative;
+  text-decoration: none;
+  // &:before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 100;
+  //   content: "";
+  //   display: block;
+  //   color: #fff;
+  //   width: 1px;
+  //   height: 1px;
+  //   background: image-url('wav02.svg') repeat-x 300px bottom;
+  //   // @include rectangle-points(8, 3, 30, 0, 0);
+  // }
 }
