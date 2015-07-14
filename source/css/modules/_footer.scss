@@ -9,6 +9,7 @@
 .b-footer__menu {
   @extend .pure-menu;
   @extend .pure-menu-horizontal;
+  @include clearfix;
   padding: 20px 0;
   border-bottom: 1px solid #efefef;
 }
@@ -49,4 +50,13 @@
 .b-footer__social-link {
   @extend .pure-menu-link;
   color: $color-darkgray;
+}
+
+@include breakpoint('tablet', 'max') {
+  .b-footer__menu {
+    .b-footer__menu-list {
+      &:first-child { display: none; }
+      // float: none;
+    }
+  }
 }
