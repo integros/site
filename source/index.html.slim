@@ -1,44 +1,122 @@
----
-pageable: true
-per_page: 10
----
+header.b-header
+  .b-header__inner
+    .b-header__menu
+      a.b-header__logo-link href="#"
+        img src="#{image_path 'logo.svg'}" width="100" data-no-retina=""
+      a.b-header__menu-toggle href="#" id="toggle"
+        span class="bar"
+        span class="bar"
+        span class="bar"
+      ul.b-header__menu-list
+        li.b-header__menu-item: a href="#" class="b-header__menu-link" Pricing
+        li.b-header__menu-item: a href="#" class="b-header__menu-link" Developers
+        li.b-header__menu-item: a href="#" class="b-header__menu-link" Contacts
+        li.b-header__menu-item: a href="#" class="pure-button pure-button-primary" Get access
 
+main
+  .b-about
+    .b-about__inner
+      .b-about__text
+        h1
+          | VideoLayer
+          sup TM
+          br/
+          | for developers
+        .ivs-separator
+        p The right way to integrate video stack into your apps. Design, SDK and infrastructure out of the box.
+        a.pure-button.pure-button-primary href="#" Get access
+      .b-about__picture.b-about__picture--animating
+        .b-about__layers
+          img.b-about__player src="#{image_path('player.png')}" data-no-retina=""
+          img.b-about__backend src="#{image_path('backend.png')}" data-no-retina=""
+          img.b-about__core src="#{image_path('core.png')}" data-no-retina=""
+      .b-about__picture.b-about__picture--animating
+        .b-about__layers
+          img.b-about__player src="#{image_path('player.png')}"
+          img.b-about__backend src="#{image_path('backend.png')}"
+          img.b-about__core src="#{image_path('core.png')}"
 
+  .b-why
+    .b-why__inner
+      h2
+        | Why you’ll love VideoLayer
+        sup TM
+      .b-why__features
+        .b_why__feature
+          .b_why__feature-inner
+            img src="#{image_path 'watch.png'}" data-no-retina=""
+            img src="#{image_path 'watch.png'}"
+            h3 Start saving <br/> time
+            .ivs-separator
+            p
+              | Designed for simple integration.
+              br
+              | Power your app with video
+              br
+              | features in a few lines of code.
+        .b_why__feature
+          .b_why__feature-inner
+            img src="#{image_path 'wallet.png'}" data-no-retina=""
+            img src="#{image_path 'wallet.png'}"
+            h3 Affordable <br/> pricing
+            .ivs-separator
+            p
+              | Let your product track revenue
+              br
+              | and pay as you go. One simple
+              br
+              | price with no hidden fees.
+        .b_why__feature
+          .b_why__feature-inner
+            img src="#{image_path 'devices.png'}" data-no-retina=""
+            img src="#{image_path 'devices.png'}"
+            h3 Build for your environment
+            .ivs-separator
+            p
+              | Choose suitable SDK for mobile
+              br
+              | or desktop. Use components
+              br
+              | and modules you need.
+  .b-stats
+    .b-stats__inner
+      h2 Focus on technology
+      .ivs-separator
+      p
+        | When you host with us, you get all of us. This means access to the best
+        br
+        | of what we have, 24 hours a day, 7 days a week.
+      .b-stats__infos
+        .b-stats__info
+          .b-stats__info-value 500
+          .b-stats__info-desc GB/sec<sup>*</sup>
+        .b-stats__info
+          .b-stats__info-value 1.21<sup>million</sup>
+          .b-stats__info-desc req/sec<sup>*</sup>
 
-| Nothing here
-/ - page_articles.each_with_index do |article, i|
-/   h1
-/     = link_to article.title, article
-/   p
-/     - article.tags.each do |tag|
-/       small.label.label-default
-/         = tag
-/   hr
-/   p
-/     span.glyphicon.glyphicon-time
-/     |  Posted on
-/     = article.date.strftime('%b %e')
-/   hr
-/   - if article.data.image_src
-/     img.img-responsive src=article.data.image_src
-/     hr
-/   = article.summary
-/   a.btn.btn-primary href=article.url
-/     | Read More
-/     span.glyphicon.glyphicon-chevron-right
-/   hr
-/ - if paginate
-/   - if num_pages > 1
-/     .well-sm
-/       ul.pager
-/         - if page_number > 1
-/           li.previous
-/             = link_to '&larr;', prev_page
-/         span.text-center
-/           | Page
-/           = page_number
-/           |  of
-/           = num_pages
-/         - if page_number < num_pages
-/           li.next
-/             = link_to '&rarr;', next_page
+    .b-stats_reference <sup>*</sup>Real-time analytics from the VideoLayer
+
+  .b-getaccess
+    .b-getaccess__inner
+      a.b-getaccess__link href="#" Get access
+
+footer.b-footer
+  .b-footer__inner
+    .b-footer__menu
+      ul.b-footer__menu-list
+        li.pure-menu-item: a href="#" class="b-footer__menu-link" About
+        li.pure-menu-item: a href="#" class="b-footer__menu-link" Pricing
+        li.pure-menu-item: a href="#" class="b-footer__menu-link" Docs
+        li.pure-menu-item: a href="#" class="b-footer__menu-link" Contacts
+
+      ul.b-footer__menu-list.pull-right
+        li.pure-menu-item: a href="#" class="b-footer__menu-link" Sign in
+        li.pure-menu-item: a href="#" class="pure-button pure-button-primary" Contact us
+
+    .b-footer__copyright
+      .b-footer__social-menu
+        span.b-footer__copytext &copy; 2015 Integros Video Layer
+        ul.b-footer__social-menu-list.pull-right
+          li.pure-menu-item: a href="#" class="b-footer__social-link" Twitter
+          li.pure-menu-item: a href="#" class="b-footer__social-link" Github
+          li.pure-menu-item: a href="#" class="b-footer__social-link" Dribbble
