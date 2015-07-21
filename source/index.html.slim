@@ -2,7 +2,7 @@ header.b-header
   .b-header__inner
     .b-header__menu
       a.b-header__logo-link href="#"
-        img src="#{image_path 'logo.svg'}" width="100" data-no-retina=""
+        img src="#{image_path 'logo.png'}"
       a.b-header__menu-toggle href="#" id="toggle"
         span class="bar"
         span class="bar"
@@ -27,14 +27,19 @@ main
         a.pure-button.pure-button-primary href="#" Get access
       .b-about__picture.b-about__picture--animating
         .b-about__layers
-          img.b-about__player src="#{image_path('player.png')}" data-no-retina=""
-          img.b-about__backend src="#{image_path('backend.png')}" data-no-retina=""
-          img.b-about__core src="#{image_path('core.png')}" data-no-retina=""
-      .b-about__picture.b-about__picture--animating
-        .b-about__layers
-          img.b-about__player src="#{image_path('player@2x.png')}" data-no-retina=""
-          img.b-about__backend src="#{image_path('backend@2x.png')}" data-no-retina=""
-          img.b-about__core src="#{image_path('core@2x.png')}" data-no-retina=""
+          img.b-about__player src="#{image_path('play.png')}" data-no-retina=""
+          img.b-about__backend src="#{image_path('api.png')}" data-no-retina=""
+          img.b-about__core src="#{image_path('infrastructure.png')}" data-no-retina=""
+      / .b-about__picture.b-about__picture--animating
+      /   .b-about__layers
+      /     img.b-about__player src="#{image_path('player.png')}" data-no-retina=""
+      /     img.b-about__backend src="#{image_path('backend.png')}" data-no-retina=""
+      /     img.b-about__core src="#{image_path('core.png')}" data-no-retina=""
+      / .b-about__picture.b-about__picture--animating
+      /   .b-about__layers
+      /     img.b-about__player src="#{image_path('player@2x.png')}" data-no-retina=""
+      /     img.b-about__backend src="#{image_path('backend@2x.png')}" data-no-retina=""
+      /     img.b-about__core src="#{image_path('core@2x.png')}" data-no-retina=""
 
   .b-why
     .b-why__inner
