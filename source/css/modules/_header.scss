@@ -9,11 +9,12 @@
   @extend .pure-menu;
   @extend .pure-menu-horizontal;
   position: relative;
-  padding: 10px 0;
-  border-bottom: 1px solid #efefef;
-  height: 3.7em;
-  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #dbdbdb; //efefef
+  // height: 3.7em;
+  // overflow: hidden;
   @include transition(height 0.5s);
+  @include clearfix;
 }
 .b-header__menu-link {
   @extend .pure-menu-link;
@@ -26,10 +27,20 @@
 }
 .b-header__menu-item {
   @extend .pure-menu-item;
+  font-size: 1.1em;
+  .pure-button {
+    padding-left: 1.9em;
+    padding-right: 1.9em;
+    margin-left: 1em;
+  }
+}
+.b-header__menu-item--disabled {
+  @extend .pure-menu-disabled;
+  // color: $color-gray;
 }
 .b-header__logo-link {
   display: inline-block;
-  padding: .4em 0em;
+  padding: 12px 0;
   line-height: 1px;
 }
 
@@ -61,7 +72,7 @@
   }
   .b-header__menu {
     &.b-header__menu--open {
-      height: 14em;
+      height: 10em;
     }
     .b-header__menu-list {
       display: block;

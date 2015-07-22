@@ -1,8 +1,8 @@
-@mixin box-shadow-points($x,$y, $offset: 30, $opacity: 0.5) {
+@mixin box-shadow-points($x,$y, $offset: 30, $opacity: 0.3) {
   $content: '0px 0px 0 1px rgba(255, 255, 255, 0)';
   @for $i from 0 to $x {
     @for $j from 0 to $y {
-      $content: $content + ', #{$i*$offset + 1}px #{$j*$offset + 1}px 0 .5px rgba(255, 255, 255, #{$opacity})';
+      $content: $content + ', #{$i*$offset + 4}px #{$j*$offset + 10}px 0 .5px rgba(255, 255, 255, #{$opacity})';
     }
   }
   box-shadow: #{$content};
@@ -37,7 +37,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1;
     content: "";
     display: block;
     color: #fff;
@@ -48,13 +48,18 @@
 }
 
 .b-getaccess__link {
-  padding: 40px;
+  z-index: 2;
+  padding: 10px 40px;
   margin-left: 4px;
   color: white;
   font-size: 2em;
   text-align: center;
   position: relative;
   text-decoration: none;
+  &:hover, &:active {
+    @include border-radius(5px);
+    @include background(linear-gradient(to bottom right, $color-skyblue, $color-blue));
+  }
   // &:before {
   //   position: absolute;
   //   top: 0;

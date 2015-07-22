@@ -25,6 +25,10 @@
   }
 }
 
+.b-footer__menu-item--disabled {
+  @extend .pure-menu-disabled;
+}
+
 .b-footer__copyright {
   padding: 20px 0;
   color: $color-darkgray;

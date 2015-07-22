@@ -24,14 +24,18 @@
 .b-stats__inner {
   @extend .pure-u-5-5;
   @extend .container;
-  padding-top: 50px;
-  padding-bottom: 200px;
+  padding-top: 145px;
+  padding-bottom: 160px;
   text-align: center;
   color: white;
   h2 {
-    font-size: 2.2em;
+    margin: 0 0 25px;
+    font-size: 3em;
+    font-weight: lighter;
   }
-  h2, p {
+  p {
+    margin: 25px 0 0;
+    font-size: 1.2em;
     font-weight: lighter;
     line-height: 2em;
   }
@@ -43,7 +47,7 @@
 .b-stats__infos {
   @extend .pure-g;
   max-width: 500px;
-  margin: 50px auto;
+  margin: 110px auto;
 }
 .b-stats__info {
   @extend .pure-u-sm-1-2;
