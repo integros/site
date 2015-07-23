@@ -96,33 +96,35 @@
 }
 
 @include keyframes(explode-player) {
-  // 50% {
-  //   @include transform(scale(1) translate3d(0px, 0px, 0));
-  // }
   100% {
     top: 90px;
     left: -90px;
-    // @include transform(translate3d(-30%, 30%, 0));
+  }
+}
+@include breakpoint('mobileonly', 'max') {
+  @include keyframes(explode-player) {
+    100% {
+      top: 40px;
+      left: -40px;
+    }
   }
 }
 
-// @include keyframes(explode-backend) {
-//   100% {
-//     @include transform(scale(1) translate3d(0px, 0px, 0));
-//   }
-// }
 
 @include keyframes(explode-core) {
-  // 50% {
-  //   @include transform(scale(1) translate3d(0px, 0px, 0));
-  // }
   100% {
-    // @include transform(translate3d(30%, -30%, 0));
     top: -90px;
     left: 90px;
   }
 }
-
+@include breakpoint('mobileonly', 'max') {
+  @include keyframes(explode-core) {
+    100% {
+      top: -40px;
+      left: 40px;
+    }
+  }
+}
 
 @include breakpoint('laptop', 'max') {
   .b-about__inner {
