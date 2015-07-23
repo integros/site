@@ -25,7 +25,7 @@
               <a class="b-header__menu-link" href="#" onclick="return false;">Contacts</a>
             </li>
             <li class="b-header__menu-item">
-              <a class="pure-button pure-button-primary" href="#">Get access</a>
+              <a class="pure-button pure-button-primary btn-get-access" href="#">Get access</a>
             </li>
           </ul>
         </div>
@@ -43,7 +43,7 @@
               <p>
                 The right way to integrate video<br/>stack into your apps. Design, SDK<br/>and infrastructure out of the box.
               </p>
-              <a class="pure-button pure-button-primary" href="#">Get access</a>
+              <a class="pure-button pure-button-primary btn-get-access" href="#">Get access</a>
             </div>
           </div>
           <div class="b-about__picture b-about__picture--animating">
@@ -55,6 +55,9 @@
       </div>
       <div class="b-why">
         <div class="b-why__inner">
+          <h2>
+            Why you’ll love VideoLayer<sup>TM</sup>
+          </h2>
           <div class="b-why__features">
             <div class="b_why__feature">
               <div class="b_why__feature-inner">
@@ -124,6 +127,24 @@
           </div>
         </div>
       </div>
+      <div class="b-meetup">
+        <div class="b-meetup__inner">
+          <div class="b-meetup__content">
+            <div class="b-meetup__item">
+              <img src="images/logo_railsclub.png" />
+            </div>
+            <div class="b-meetup__item">
+              <h3>
+                Ruby Meetup<br/> July, 2015
+              </h3>
+            </div>
+          </div>
+          <br />
+          <div class="b-meetup__links">
+            <a class="pure-button pure-button-primary btn-get-access" href="#">Get early access</a>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="b-footer">
       <div class="b-footer__inner">
@@ -147,7 +168,7 @@
               <a class="b-footer__menu-link" href="#">Sign in</a>
             </li>
             <li class="pure-menu-item">
-              <a class="pure-button pure-button-primary" href="#">Contact us</a>
+              <a class="pure-button pure-button-primary btn-get-access" href="#">Contact us</a>
             </li>
           </ul>
         </div>
@@ -168,6 +189,38 @@
           </div>
         </div>
       </div>
-    </footer><script src="js/application.js" type="text/javascript"></script>
+    </footer>
+    <div class="b-signin-modal">
+      <div class="b-signin">
+        <div class="b-signin__success">
+          <p>
+            Thanks! We'll get back<br/>to you shortly!
+          </p>
+          <br /><button class="b-signin__success-close">Close</button>
+        </div>
+        <form action="https://api.integros.com/early_access" class="b-signin__form" method="POST">
+          <div class="b-signin__header">
+            <h2>
+              Get early access
+            </h2>
+          </div>
+          <div class="b-signin__form-element b-signin__form-element-name">
+            <input id="registration_name" name="registration[name]" placeholder="Your name" required="" type="text" value="" /><label for="registration_name"><i class="fa fa-user"></i></label>
+            <div class="b-signin__error">
+              &nbsp;
+            </div>
+          </div>
+          <div class="b-signin__form-element b-signin__form-element-email">
+            <input id="registration_email" name="registration[email]" placeholder="E-mail" required="" type="email" value="" /><label for="registration_email"><i class="fa fa-envelope-o"></i></label>
+            <div class="b-signin__error">
+              &nbsp;
+            </div>
+          </div>
+          <div class="b-signin__form-submit">
+            <button class="b-signin__btn-submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div><script src="js/application.js" type="text/javascript"></script>
   </body>
 </html>
