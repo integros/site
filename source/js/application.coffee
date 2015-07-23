@@ -9,7 +9,7 @@
 $ ->
   vex.defaultOptions.className = 'vex-theme-integros'
 
-  $('a, .btn-get-access').on 'click', ->
+  $('.btn-get-access').on 'click', ->
     vex.open
       showCloseButton: true
       content: $('.b-signin-modal').html()
@@ -19,16 +19,24 @@ $ ->
     e.preventDefault();
     vex.close()
 
+  Loader =
+    show: ->
+      vex.showLoading()
+      $('.b-signin').addClass('b-signin--loading')
+      $('.vex .b-signin__btn-submit').prop('disabled', true)
+    hide: ->
+      vex.hideLoading()
+      $('.b-signin').removeClass('b-signin--loading')
+      $('.vex .b-signin__btn-submit').prop('disabled', false)
+
   $(document).on 'click', '.b-signin__btn-submit', (e)->
     e.preventDefault();
     form = $(this).closest('form')
 
-    vex.showLoading()
-    $(this).prop('disabled', true)
+    Loader.show();
 
     $.post 'https://api.integros.com/early_access', form.serialize(), (response)=>
-      vex.hideLoading()
-      $(this).prop('disabled', false)
+      Loader.hide();
 
       if response.success
         form.hide()

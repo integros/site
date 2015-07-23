@@ -17,6 +17,23 @@ $color-input-error: #d82626;
     bottom: 0;
     @include background(#1e72ff image-url('logo-invert-lg.png') no-repeat center center);
   }
+  &.b-signin--loading:after {
+    z-index: 1000;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    /* IE */
+    background: #000;
+    filter: alpha(opacity=20); /* IE 5–7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; /* IE 8 */
+
+    background: rgba(0, 0, 0, .2);
+
+  }
 }
 
 .b-signin__header {
@@ -62,7 +79,7 @@ $color-input-error: #d82626;
   @include clearfix;
   overflow: visible;
   input {
-    padding: 12px 60px;
+    padding: 12px 10px 12px 60px;
     width: 100%;
     color: $color-input-focus;
     font-weight: lighter;
@@ -230,71 +247,63 @@ $color-input-error: #d82626;
   border-top-color: #bbb;
 }
 
-//     .vex-dialog-form
+@include breakpoint('tablet', 'max') {
+  .b-signin {
+    margin-left: 30%;
+    &:before {
+      right: 70%;
+      background-size: 40%;
+    }
+  }
+  .vex.vex-theme-integros .vex-content {
+    width: 650px;
+  }
+  .vex-loading-spinner {
+    top: -300px;
+  }
+}
 
-//         .vex-dialog-message
-//             margin-bottom: .5em
+@include breakpoint('680px', 'max') {
+  .b-signin {
+    margin-left: 0;
+    &:before { display: none; }
+  }
 
-//         .vex-dialog-input
-//             margin-bottom: 1em
-
-//             textarea, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]
-//                 +border-radius(3px)
-//                 background: #fff
-//                 width: 100%
-//                 padding: .25em .67em
-//                 border: 0
-//                 font-family: inherit
-//                 font-weight: inherit
-//                 font-size: inherit
-//                 min-height: 2.5em
-//                 margin: 0 0 .25em
-
-//                 &:focus
-//                     +box-shadow(inset 0 0 0 2px lighten($blue, 20%))
-//                     outline: none
-
-//         .vex-dialog-buttons
-//             +pie-clearfix()
-
-//     .vex-dialog-button
-//         +border-radius(3px)
-//         border: 0
-//         float: right
-//         margin: 0 0 0 .5em
-//         font-family: inherit
-//         text-transform: uppercase
-//         letter-spacing: .1em
-//         font-size: .8em
-//         line-height: 1em
-//         padding: .75em 2em
-
-//         &.vex-last
-//             margin-left: 0
-
-//         &:focus
-//             +vex-animation(vex-pulse 1.1s infinite)
-//             outline: none
-
-//             // vex-pulse uses -webkit-filter which
-//             // doesn't play so nice in mobile webkit
-//             @media (max-width: 568px)
-//                 +vex-animation(none)
-
-//         &.vex-dialog-button-primary
-//             background: $blue
-//             color: #fff
-
-//         &.vex-dialog-button-secondary
-//             background: #e0e0e0
-//             color: #777
-// }
-
-// .vex-loading-spinner.vex-theme-default
-//     +box-shadow(0 0 0 .5em #f0f0f0, 0 0 1px .5em rgba(0, 0, 0, 0.3))
-//     +border-radius(100%)
-//     background: #f0f0f0
-//     border: .2em solid transparent
-//     border-top-color: #bbb
-//     top: -1.1em
-//     bottom: auto
+  .vex.vex-theme-integros {
+    padding-top: 40px;
+    .vex-content {
+      max-width: 80%;
+    }
+  }
+  .b-signin__form {
+    padding: 10px 30px 20px;
+  }
+  .b-signin__header h2 {
+    font-size: 1.4em;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  .b-signin__form-element label {
+    padding-left: 5px;
+  }
+  .b-signin__form-element input {
+    padding-left: 45px;
+  }
+  .b-signin__error {
+    position: relative;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    color: $color-input-error;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+  }
+  .b-signin__success {
+    padding: 40px 20px;
+    p {
+      font-size: 1.2em;
+    }
+  }
+}

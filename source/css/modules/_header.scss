@@ -47,10 +47,10 @@
   width: 34px;
   height: 51px;
   position: absolute;
-  top: 0;
+  top: 2em;
   right: 0;
   display: none;
-  padding-top: 1.3em;
+  // padding-top: 1.3em;
   span {
     background-color: #777;
     display: block;
@@ -70,8 +70,9 @@
     display: block;
   }
   .b-header__menu {
+    height: 5em;
     &.b-header__menu--open {
-      height: 10em;
+      height: 20em;
     }
     .b-header__menu-list {
       display: block;

@@ -93,3 +93,11 @@
     }
   }
 }
+
+@include breakpoint('mobileonly', 'max') {
+  .b-stats__inner {
+    p {
+      font-size: 1em;
+    }
+  }
+}
