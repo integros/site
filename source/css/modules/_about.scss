@@ -84,7 +84,7 @@
 
 .b-about__picture--animating .b-about__player {
   z-index: 30;
-  @include animation(explode-player 1500ms 0ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
+  @include animation(explode-player 1500ms 1000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
 }
 .b-about__picture--animating .b-about__backend {
   z-index: 20;
@@ -92,7 +92,7 @@
 }
 .b-about__picture--animating .b-about__core {
   z-index: 10;
-  @include animation(explode-core 1500ms 0ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
+  @include animation(explode-core 1500ms 1000ms 1 forwards cubic-bezier(0.44, 0.22, 0, 1));
 }
 
 @include keyframes(explode-player) {
@@ -100,7 +100,9 @@
   //   @include transform(scale(1) translate3d(0px, 0px, 0));
   // }
   100% {
-    @include transform(scale(1) translate3d(-30%, 30%, 0));
+    top: 90px;
+    left: -90px;
+    // @include transform(translate3d(-30%, 30%, 0));
   }
 }
 
@@ -115,7 +117,9 @@
   //   @include transform(scale(1) translate3d(0px, 0px, 0));
   // }
   100% {
-    @include transform(scale(1) translate3d(30%, -30%, 0));
+    // @include transform(translate3d(30%, -30%, 0));
+    top: -90px;
+    left: 90px;
   }
 }
 
