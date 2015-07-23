@@ -1,5 +1,6 @@
 .b-footer {
   @extend .pure-g;
+  background: white;
 }
 .b-footer__inner {
   @extend .pure-u-5-5;
@@ -10,8 +11,8 @@
   @extend .pure-menu;
   @extend .pure-menu-horizontal;
   @include clearfix;
-  padding: 20px 0;
-  border-bottom: 1px solid #efefef;
+  padding: 10px 0;
+  border-bottom: 1px solid #dbdbdb;
 }
 .b-footer__menu-link {
   @extend .pure-menu-link;

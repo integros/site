@@ -1,0 +1,62 @@
+.b-meetup {
+  @extend .pure-g;
+  position: relative;
+}
+.b-meetup__inner {
+  @extend .pure-u-5-5;
+  @extend .container;
+}
+
+.b-meetup__content {
+  @extend .pure-g;
+  // max-width: 500px;
+  margin: 110px auto 50px;
+}
+.b-meetup__item {
+  @extend .pure-u-sm-1-2;
+  @extend .pure-u-5-5;
+  font-weight: lighter;
+  &:nth-child(1) {
+    border-right: 1px solid $color-gray;
+    text-align: right;
+    padding-right: 50px;
+    height: 132px;
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img {
+      vertical-align: middle;
+      max-width: 95%;
+      height: auto;
+    }
+  }
+  &:nth-child(2) {
+    text-align: left;
+    padding-left: 50px;
+  }
+  h3 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: lighter;
+  }
+}
+.b-meetup__links {
+  text-align: center;
+  margin-bottom: 110px;
+}
+
+@include breakpoint('568px', 'max') {
+  .b-meetup__content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .b-meetup__item {
+    &:nth-child(1) {
+      border: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
