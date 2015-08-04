@@ -137,13 +137,9 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :sftp
-  deploy.host     = 'integros.com'
+  deploy.host     = 'integros'
   deploy.port     = 22
-  deploy.path     = '/var/www/marketing_site/current/public'
-  deploy.user     = 'deploy'
+  deploy.path     = '/var/www'
+  deploy.user     = 'root'
   deploy.build_before = true
-#   deploy.host = "ftp-host"
-#   deploy.user = "ftp-user"
-#   deploy.password = "ftp-password"
-#   deploy.path = "ftp-path"
 end

@@ -17,16 +17,24 @@
 .b-footer__menu-link {
   @extend .pure-menu-link;
   color: black;
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .b-footer__menu-list {
   @extend .pure-menu-list;
+  li:first-child {
+    .b-footer__menu-link {
+      padding-left: 0;
+    }
+  }
   &.pull-right {
     float: right;
   }
 }
 
-.b-footer__menu-item--disabled {
+.b-footer__menu-link--disabled {
   @extend .pure-menu-disabled;
 }
 

@@ -1,7 +1,7 @@
 header.b-header
   .b-header__inner
     .b-header__menu
-      a.b-header__logo-link href="#"
+      a.b-header__logo-link href="/"
         img src="#{image_path 'logo.png'}"
       a.b-header__menu-toggle href="#" id="toggle"
         span class="bar"
@@ -109,17 +109,17 @@ footer.b-footer
   .b-footer__inner
     .b-footer__menu
       ul.b-footer__menu-list
-        li.pure-menu-item.b-footer__menu-item--disabled
-          a.btn-get-access href="#" class="b-footer__menu-link" About
-        li.pure-menu-item.b-footer__menu-item--disabled
+        li.pure-menu-item
+          a.btn-get-access.b-footer__menu-link--disabled href="#" class="b-footer__menu-link" About
+        li.pure-menu-item
           a.btn-get-access href="#" class="b-footer__menu-link" Pricing
-        li.pure-menu-item.b-footer__menu-item--disabled
+        li.pure-menu-item
           a.btn-get-access href="#" class="b-footer__menu-link" Docs
-        li.pure-menu-item.b-footer__menu-item--disabled
+        li.pure-menu-item
           a.btn-get-access href="#" class="b-footer__menu-link" Contacts
 
       ul.b-footer__menu-list.pull-right
-        li.pure-menu-item.b-footer__menu-item--disabled
+        li.pure-menu-item
           a.btn-get-access href="#" class="b-footer__menu-link" Sign in
         li.pure-menu-item
           a href="#" class="pure-button pure-button-primary btn-get-access" Contact us
