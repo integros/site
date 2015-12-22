@@ -1,0 +1,144 @@
+$path-img: image-path(''); //"/i/";
+
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// --------------------------------------------------
+
+$gray-base:              #000 !default;
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            $gray-base !default;
+
+//** Global textual link color.
+$link-color:            #000 !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+//== Typography
+$font-family-serif:       'Lato', sans-serif !default;
+$font-family-base:        $font-family-serif !default;
+
+$font-size-base:          18px !default;
+
+$line-height-base:        1.428571429 !default; // 20/14
+
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        5px !default;
+
+//== Buttons
+$btn-font-weight:                bold !default;
+
+$btn-default-color:              #4e37c1 !default;
+$btn-default-color-hover:        #4e37c1 !default;
+$btn-default-bg:                 #e6e6ec !default;
+$btn-default-bg-hover:           #ffffff !default;
+$btn-default-border:             #fff !default;
+
+$btn-tran-color:                 #fff !default;
+$btn-tran-color-hover:           #4e37c1 !default;
+$btn-tran-bg:                    transparent !default;
+$btn-tran-bg-hover:              #ffffff !default;
+$btn-tran-border:                #fff  !default;
+
+$btn-sender-font-size:           14px !default;
+$btn-sender-color:               #fff !default;
+$btn-sender-color-hover:         #fff !default;
+$btn-sender-bg:                  #3a79ef !default;
+$btn-sender-bg-hover:            #425fdd !default;
+$btn-sender-border:              #3a79ef  !default;
+
+$button-toggle-font-size:        $btn-sender-font-size !default;
+$button-toggle-color:            $btn-sender-color !default;
+$button-toggle-color-hover:      $btn-sender-color-hover !default;
+$button-toggle-bg:               $btn-sender-bg !default;
+$button-toggle-bg-hover:         $btn-sender-bg-hover !default;
+$button-toggle-border:           $btn-sender-border  !default;
+$button-toggle-height:           51px;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+//== Media queries breakpoints
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1193px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         38px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+$container-phone: 19px;
+
+$modal-md-width: 644px;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1133px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;

@@ -1,0 +1,124 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+
+  padding: 7px 25px 7px;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  border-radius: $btn-border-radius-base;
+
+  @include user-select(none);
+
+  &:hover{
+    color: $btn-default-color;
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.btn-lg{
+    width: 100%;
+  }
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  color: $btn-default-color;
+  background-color: $btn-default-bg;
+  border-color: $btn-default-border;
+
+  @include transition(all ease-out 0.1s);
+
+  &:hover{
+    color: $btn-default-color-hover;
+    background-color: $btn-default-bg-hover;
+  }
+}
+
+.btn-tran {
+  color: $btn-tran-color;
+  background-color: $btn-tran-bg;
+  border-color: $btn-tran-border;
+
+  @include transition(all ease-out 0.1s);
+
+  &:hover{
+    color: $btn-tran-color-hover;
+    background-color: $btn-tran-bg-hover;
+  }
+}
+
+.btn-sender {
+  letter-spacing: 3px;
+  font-size: $btn-sender-font-size;
+
+  color: $btn-sender-color;
+  background-color: $btn-sender-bg;
+  border: 0;
+
+  @include transition(all ease-out 0.3s);
+
+  &:hover{
+    color: $btn-sender-color-hover;
+    background-color: $btn-sender-bg-hover;
+  }
+}
+
+.button-toggle{
+  .btn{
+    height: $button-toggle-height;
+    line-height: $button-toggle-height;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    letter-spacing: 3px;
+    font-size: $button-toggle-font-size;
+
+    color: $button-toggle-color;
+    background-color: transparent;
+    border: 0;
+
+    @include transition(all ease-out 0.3s);
+
+    &:hover{
+      color: $button-toggle-color-hover;
+      background-color: transparent;
+    }
+  }
+}

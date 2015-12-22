@@ -1,0 +1,259 @@
+---
+early_access_url: 'https://api.integros.com/early_access'
+---
+
+<header>
+  <div class="container">
+    <div class="header-toolbar">
+      <button class="btn btn-tran" data-modal="#modal-contact-us">Contact us</button>
+    </div>
+
+    <a href="/" class="header-logo">
+      <div class="main-ico main-ico-logo"></div>
+    </a>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="harmonic-panel">
+          <div class="panel-title">
+            Integrate video <br>
+            into your <span class="hr"></span> app
+          </div>
+          <hr>
+          <div class="panel-text">
+            The right way to integrate video <br>
+            stack into your apps. Design, SDK <br>
+            and infrastructure out of the box.
+          </div>
+          <div class="panel-toolbar">
+            <a href="#link-get-access" class="btn btn-default link-scroll">Get access</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 visible-lg visible-md">
+        <svg version="1.1" width="530" height="530" viewBox="0 0 530 530" enable-background="new 0 0 530 530" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+
+          <defs>
+            <clipPath id="harmonic_image2_path">
+              <path transform="translate(230 44)" d="M-130 -60 L296 100 L420 420 L182 420 L182 182 L-130 67 Z"></path>
+            </clipPath>
+
+            <clipPath id="harmonic_image3_path">
+              <path transform="translate(230 44)" d="M-130 -60 L296 100 L420 420 L182 420 L182 182 L-130 67 Z"></path>
+            </clipPath>
+          </defs>
+
+          <g id="harmonic_image1">
+            <image width="296px" height="323px" y="118px" x="116px" xlink:href="<%= image_path('harmonic/zi1@2x.png') %>"></image>
+          </g>
+
+          <image clip-path="url(#harmonic_image2_path)" width="296px" height="321px" y="118px" x="116px" xlink:href="<%= image_path('harmonic/zi2@2x.png') %>"></image>
+
+          <g id="harmonic_image3">
+            <image clip-path="url(#harmonic_image3_path)" width="297px" height="323px" y="118px" x="116px" xlink:href="<%= image_path('harmonic/zi3@2x.png') %>"></image>
+          </g>
+
+          <animateTransform
+              xlink:href="#harmonic_image1"
+              attributeName="transform"
+              type="translate"
+              begin="1s"
+              from="0,0"
+              to="-115,74"
+              dur="1s"
+              calcMode="spline"
+              keySplines=".66,.01,.26,.99"
+              keyTimes="0;1"
+              fill="freeze"></animateTransform>
+
+          <animateTransform
+              xlink:href="#harmonic_image2_path"
+              attributeName="transform"
+              type="translate"
+              begin="1s"
+              from="0,0"
+              to="-115,74"
+              dur="1s"
+              calcMode="spline"
+              keySplines=".66,.01,.26,.99"
+              keyTimes="0;1"
+              fill="freeze"></animateTransform>
+
+          <animateTransform
+              xlink:href="#harmonic_image3"
+              attributeName="transform"
+              type="translate"
+              begin="1s"
+              from="0,0"
+              to="114,-80"
+              dur="1s"
+              calcMode="spline"
+              keySplines=".66,.01,.26,.99"
+              keyTimes="0;1"
+              fill="freeze"></animateTransform>
+
+          <animateTransform
+              xlink:href="#harmonic_image3_path"
+              attributeName="transform"
+              type="translate"
+              begin="1s"
+              from="0,0"
+              to="-114,80"
+              dur="1s"
+              calcMode="spline"
+              keySplines=".66,.01,.26,.99"
+              keyTimes="0;1"
+              fill="freeze"></animateTransform>
+
+        </svg>
+
+      </div>
+    </div>
+
+  </div>
+
+</header>
+
+<div id="root">
+  <div class="container-modal-inline" id="link-get-access">
+    <div class="modal-inline-bg"></div>
+    <div class="modal modal-inline">
+      <form action="<%= current_page.data.early_access_url %>" method="POST">
+        <div class="modal-header">
+          Get early access
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="form-group">
+                <label class="label">YOUR NAME</label>
+                <input type="text" name="registration[name]" class="form-control form-lg" placeholder="Your name">
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="form-group">
+                <label class="label">YOUR E-MAIL</label>
+                <input type="text" name="registration[email]" class="form-control form-lg" placeholder="your@email.com">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-toolbar">
+          <div class="button-toggle">
+            <button class="btn" type="submit" id="early-access-submit">CONTINUE</button>
+            <div class="btn">SENDING...</div>
+          </div>
+        </div>
+        <div class="modal-cap">
+          <div class="modal-cap-panel">
+            <div class="modal-cap-image"><div class="main-ico main-ico-mailbox"></div></div>
+            <div class="modal-cap-title">Thank you!</div>
+            <div class="modal-cap-desc">Your message has been submited.<br> Wait for reply!</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container container-company">
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <a href="/">
+          <div class="company-panel">
+            <div class="main-ico main-ico-yandex-logo"></div>
+            <div class="panel-title">ruBSD 2014</div>
+            <div class="hr"></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <a href="/">
+          <div class="company-panel">
+            <div class="main-ico main-ico-railssclub-logo"></div>
+            <div class="panel-title">RailsClub Meetup 2015</div>
+            <div class="hr"></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <a href="/">
+          <div class="company-panel">
+            <div class="main-ico main-ico-ic5-logo"></div>
+            <div class="panel-title">IBC 2014/2015</div>
+            <div class="hr"></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <a href="/">
+          <div class="company-panel company-panel-last">
+            <div class="main-ico main-ico-highload-logo"></div>
+            <div class="panel-title">HighLoad++ 2014/2015</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <hr>
+    <div class="footer-panel">
+      <a href="/" class="footer-logo">
+          <div class="main-ico main-ico-footer-logo"></div>
+      </a>
+      <div class="footer-copy">
+        © 2015 Integros Video Layer Ltd.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="modal-contact-us" class="modal modal-template">
+  <a href="#close" data-modal-action="close"><span class="main-ico main-ico-close"></span></a>
+  <div class="modal-header">
+    Contact us
+  </div>
+  <form action="<%= current_page.data.early_access_url %>" method="POST">
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label class="label">YOUR NAME</label>
+            <input type="text" name="registration[name]" class="form-control form-lg" placeholder="Your name">
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="form-group">
+            <label class="label">YOUR E-MAIL</label>
+            <input type="text" name="registration[email]" class="form-control form-lg" placeholder="your@email.com">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label class="label">TYPE YOUR MESSAGE</label>
+            <textarea name="registration[message]" class="form-control form-lg" rows="1" data-auto-height="true" placeholder="Hello! My name is Your name. I just want to say «Hello»"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-toolbar">
+      <div class="button-toggle">
+        <button class="btn" type="submit" id="contact-us-submit">CONTINUE</button>
+        <div class="btn">SENDING...</div>
+      </div>
+    </div>
+    <div class="modal-cap">
+      <a href="#close" data-modal-action="close"><span class="main-ico main-ico-close-white"></span></a>
+      <div class="modal-cap-panel">
+        <div class="modal-cap-image"><div class="main-ico main-ico-mailbox"></div></div>
+        <div class="modal-cap-title">Thank you!</div>
+        <div class="modal-cap-desc">Your message has been submited.<br> Wait for reply!</div>
+      </div>
+    </div>
+  </form>
+</div>
