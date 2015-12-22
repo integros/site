@@ -52,7 +52,7 @@ span.main-ico,
   line-height: $line-height-base;
   display: inline-block;
   background: no-repeat;
-  @include img-retina($path-img + "sprites/main.png", $path-img + "sprites/main@2x.png", 240px, 586px);
+  @include img-retina(image-path("sprites/main.png"), image-path("sprites/main@2x.png"), 240px, 586px);
 
   &.main-ico-logo {
     background-position: 0 0;
@@ -149,7 +149,7 @@ span.main-ico,
 header {
   position: relative;
   overflow: hidden;
-  background: url($path-img + "harmonic/bg.jpg") center center no-repeat;
+  background: image-url("harmonic/bg.jpg") center center no-repeat;
   @include background-size(cover);
 
   &:before,
@@ -159,7 +159,7 @@ header {
     position: absolute;
     width: 280px;
     height: 299px;
-    @include img-retina($path-img + "shapes/triangle1.png", $path-img + "shapes/triangle1@2x.png", 280px, 299px);
+    @include img-retina(image-path("shapes/triangle1.png"), image-path("shapes/triangle1@2x.png"), 280px, 299px);
   }
 
   &:before{
@@ -435,8 +435,8 @@ textarea {
       position: absolute;
       background: -140px -158px no-repeat, 522px 0 no-repeat;
       @include img-retina-custom(
-                              (url($path-img + "shapes/triangle2.png"), url($path-img + "shapes/triangle3.png")) ,
-                              (url($path-img + "shapes/triangle2@2x.png"), url($path-img + "shapes/triangle3@2x.png")) ,
+                              (image-url("shapes/triangle2.png"), image-url("shapes/triangle3.png")) ,
+                              (image-url("shapes/triangle2@2x.png"), image-url("shapes/triangle3@2x.png")) ,
                               (287px 297px, 284px 304px)
       );
 
