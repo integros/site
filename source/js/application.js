@@ -112,8 +112,8 @@ function in_init() {
 
   $('a.link-scroll').on('click', function (e) {
     e.preventDefault();
-    $('html, body').stop().animate({
-      scrollTop: $($(this).attr('href')).offset().top
+    $('#scroll').stop().animate({
+  	  scrollTop: $('#scroll').scrollTop() + $($(this).attr('href')).offset().top
     }, 600);
   });
 
